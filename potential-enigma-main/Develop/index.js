@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const {writeFile} = require('fs').promises;
-const generateMarkdown = require('.utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -31,8 +31,8 @@ const questions = [
 
     {
         type: "input",
-        message:"Who/what are the contributions to ",
-        name: "contributions",
+        message:"Who/what are the contributions to the project? ",
+        name: "contribution",
     },
 
     {
@@ -43,19 +43,13 @@ const questions = [
 
     {
         type: "input",
-        message:"What is the Title of your project?",
-        name: "title",
+        message:"What are the licenses used for this project?",
+        name: "license",
     },
 
     {
         type: "input",
-        message:"What is the Title of your project?",
-        name: "title",
-    },
-
-    {
-        type: "input",
-        message:"Go the extra mile and write tests for your application. Then provide examples on how to run them here.",
+        message:"Run tests and provide examples on how to run them here.",
         name: "tests",
     },
 ];
@@ -69,13 +63,16 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer
-    .createPromptModule(questios)
+    .prompt(questions)
     .then((answers)=>
-    writeFile('README.md', answers)
+    writeToFile('README.md', answers)
     )
     .then (() =>
-    console.log(err)
+    console.log('Success!')
     )
+    .catch( (err) =>
+        console.log(err)
+        )
 }
 
 // Function call to initialize app
