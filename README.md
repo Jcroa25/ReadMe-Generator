@@ -3,6 +3,9 @@
 
   ## Description
   Application to create professional README files
+  
+  ![Screenshot (300)](https://user-images.githubusercontent.com/107810359/213037621-c06f1859-0ba9-4eac-b2a8-8989f1ffc20e.png)
+
 
   ## Table of Contents
 
