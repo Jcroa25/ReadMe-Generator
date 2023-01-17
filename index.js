@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const {writeFile} = require('fs').promises;
-const generateMarkdown = require('./potential-enigma-main/Develop/utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
