@@ -43,7 +43,8 @@ function generateMarkdown(data) {
     ${data.license}
 
     ##Tests
-    ${data.tests}`;
+    ${data.tests}
+    `;
 }
 
 module.exports = generateMarkdown;
