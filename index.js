@@ -42,15 +42,28 @@ const questions = [
     },
 
     {
-        type: "input",
-        message:"What are the licenses used for this project?",
+        type: "list",
+        message:"What license did you use for this project?",
         name: "license",
+        choices: ["ISC License (ISC)", "The MIT License", "SIL Open Font License 1.1", "Unlicense"]
     },
 
     {
         type: "input",
         message:"Run tests and provide examples on how to run them here.",
         name: "tests",
+    },
+
+    {
+        type: "input",
+        message:"Provide your Github username.",
+        name: "username",
+    },
+
+    {
+        type: "input",
+        message:"Provide your email.",
+        name: "email",
     },
 ];
 // TODO: Create a function to write README file
