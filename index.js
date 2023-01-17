@@ -66,6 +66,7 @@ const questions = [
         name: "email",
     },
 ];
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
         return writeFile(fileName, generateMarkdown(data));
@@ -77,7 +78,7 @@ function init() {
     .prompt(questions)
     .then((answers) => writeToFile('README.md', answers))
     .then (() => console.log('README.md CREATED!'))
-    .catch( (err) => console.log(err))
+    .catch((err) => console.log(err))
 }
 
 // Function call to initialize app
