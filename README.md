@@ -20,7 +20,7 @@
   To created README.md files for future projects
 
   ## Contribution
-  MYSELF and le GOOGLE
+  N/A
 
   ## License
   This project is licensed under [The MIT License](https://opensource.org/licenses/MIT)
